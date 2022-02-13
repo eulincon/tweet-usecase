@@ -22,7 +22,12 @@ export class TweetsService {
       limit: 50,
     },
   ) {
-    return this.tweetModel.find().skip(offset).limit(limit).exec();
+    return this.tweetModel
+      .find()
+      .skip(offset)
+      .limit(limit)
+      .sort({ createdAt: -1 })
+      .exec();
   }
 
   findOne(id: number) {
