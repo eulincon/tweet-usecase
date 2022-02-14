@@ -24,16 +24,18 @@ const EmailsPage: NextPage = () => {
 	return (
 		<>
 			<Title>Emails</Title>
-			<div className='border-b' />
+			<div className='border-b mb-4' />
 			<form onSubmit={onSubmit}>
-				<textarea
-					className='border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline'
-					id='emails'
-					placeholder='Digite os emails separados por linha'
-					rows={10}
-					defaultValue={data.join('\n')}
-				></textarea>
-				<Button></Button>
+				<div className='mb-4'>
+					<textarea
+						className='border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline dark:text-white bg-default'
+						id='emails'
+						placeholder='Digite os emails separados por linha'
+						rows={10}
+						defaultValue={data.join('\n')}
+					></textarea>
+				</div>
+				<Button>Salvar</Button>
 			</form>
 		</>
 	)

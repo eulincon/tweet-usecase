@@ -13,6 +13,8 @@ const TweetsPage: NextPage = () => {
 		refreshInterval: 5000,
 	})
 
+	console.log(tweets)
+
 	return (
 		<>
 			<Title>Tweets</Title>

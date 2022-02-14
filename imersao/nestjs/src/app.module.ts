@@ -10,7 +10,7 @@ import { TweetsModule } from './tweets/tweets.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({ isGlobal: true }),
     BullModule.forRoot({
       redis: {
         host: process.env.REDIS_HOST,

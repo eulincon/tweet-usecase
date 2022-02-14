@@ -27,9 +27,9 @@ const Tweet: React.FunctionComponent<TweetProps> = ({ tweet }) => {
 						/>
 					</div>
 					<div className='ml-3'>
-						<p className='text-base leading-6 font-medium text-black'>
+						<p className='text-base leading-6 font-medium text-black dark:text-white'>
 							{tweet.User.Name}
-							<span className='text-sm font-normal text-gray-600'>
+							<span className='text-sm font-normal text-gray-600 dark:text-gray-400'>
 								@{tweet.User.ScreenName} . {timeAgo.format(tweet.CreatedAt)}
 							</span>
 						</p>
@@ -37,7 +37,7 @@ const Tweet: React.FunctionComponent<TweetProps> = ({ tweet }) => {
 				</div>
 			</div>
 			<div className='pl-16'>
-				<p className='text-black'>{tweet.Text}</p>
+				<p className='text-black dark:text-white'>{tweet.Text}</p>
 			</div>
 			<div className='mb-4' />
 		</>
